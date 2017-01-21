@@ -21,4 +21,6 @@ RUN chmod 700 $HOME/.ssh
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN  /bin/bash -c "mkdir -p /data && vim +PluginInstall +quitall &> /dev/null || echo Done"
 
+CMD ["/bin/bash", "-c", "while(true); do date; sleep 300; done"]
+
 WORKDIR /data
