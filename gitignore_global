@@ -1,0 +1,5 @@
+.vimrc
+*.swp
+.ruby-version
+.idea
+*.iml
