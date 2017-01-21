@@ -7,12 +7,11 @@ RUN  yum -y install git bash-completion tar wget vim gcc-c++ make \
 RUN mkdir -p /home/default/bin && chmod 777 /home/default
 ENV HOME=/home/default
 
-RUN bash -c "cd $HOME && git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1"
+RUN bash -c "cd /home/default && git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1"
 ENV  LANG=en_US.utf8 \
      LC_ALL=en_US.utf8 \
      TERM=xterm-256color \
      TZ="America/New_York" \
-     HOME=/root \
      GIT_PROMPT_ONLY_IN_REPO=1 \
      PATH=$PATH:$HOME/bin \
      PS1="\h:\w > "
