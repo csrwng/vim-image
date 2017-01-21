@@ -14,7 +14,8 @@ ENV  LANG=en_US.utf8 \
      TZ="America/New_York" \
      HOME=/root \
      GIT_PROMPT_ONLY_IN_REPO=1 \
-     PATH=$HOME/bin:/common/bin
+     PATH=$HOME/bin:/common/bin \
+     PS1="\h:\w > "
 COPY bashrc $HOME/.bashrc
 COPY vimrc $HOME/.vimrc
 COPY gitconfig $HOME/.gitconfig
