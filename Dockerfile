@@ -2,7 +2,7 @@ FROM centos:centos7
 
 RUN  yum -y install git bash-completion tar wget vim gcc-c++ make \
            openssl-devel python-devel python3-devel \
-           rsync 
+           rsync tmux
            
 RUN mkdir -p /home/default/bin && chmod 777 /home/default
 ENV HOME=/home/default
